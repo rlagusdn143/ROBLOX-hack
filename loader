@@ -41,4 +41,4 @@ if isWhitelisted(Players.LocalPlayer.Name) then
     print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
     print(" ")
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/rlagusdn143/tester/main/Test%20V1?token=GHSAT0AAAAAACQELHTQCHGANMNB5NN6REJ4ZTOXDLQ')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/rlagusdn143/ROBLOX-hack/main/Test%20V1')))()
