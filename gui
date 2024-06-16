@@ -6,10 +6,10 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
-
 local Players = game:GetService("Players")
-local whitelists = { "WAIJSMM", "rlagusdn143", "qnfzkdnjs123" }
+local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
 
+-- 플레이어가 화이트리스트에 있는지 확인하는 함수
 local function isWhitelisted(playerName)
     for _, name in ipairs(whitelists) do
         if name == playerName then
@@ -19,16 +19,15 @@ local function isWhitelisted(playerName)
     return false
 end
 
+-- 화이트리스트에 없는 플레이어를 강제 킥하는 함수
 local function kickNonWhitelistedPlayers()
     local playerName = Players.LocalPlayer.Name
     if not isWhitelisted(playerName) then
-        Players.LocalPlayer:Kick("ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
+        Players.LocalPlayer:Kick("당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
     end
 end
 
-kickNonWhitelistedPlayers()
-
-
+-- 로컬 플레이어가 화이트리스트에 있는지 확인 후 처리
 if isWhitelisted(Players.LocalPlayer.Name) then
     print("화이트리스트 로드 : " .. Players.LocalPlayer.Name)
     print(" ")
@@ -40,6 +39,12 @@ if isWhitelisted(Players.LocalPlayer.Name) then
     print("   \\ \\_\\ \\_\\  \\ \\_\\   \\ \\__\\\\ \\____\\   /\\____\\  \\ \\_\\\\/\\____/   \\ \\__\\")
     print("    \\/_/\\/_/   \\/_/    \\/__/ \\/____/   \\/____/   \\/_/ \\/___/     \\/__/")    
     print(" ")
+    -- 추가 코드를 여기에 추가하세요.
+else
+    kickNonWhitelistedPlayers() -- 화이트리스트에 없으면 즉시 킥합니다.
+end
+
+
 
 local OrionLib = {
 	Elements = {},
@@ -71,7 +76,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("\nHello Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
+	warn("\nHello Library - 실행중 오류가 나타났습니다\n|오류: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
