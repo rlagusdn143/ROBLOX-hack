@@ -1,45 +1,45 @@
-local Players = game:GetService("Players")
-local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
+-- local Players = game:GetService("Players")
+-- local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
 
-local function isWhitelisted(playerName)
-    for _, name in ipairs(whitelists) do
-        if name == playerName then
-            return true
-        end
-    end
-    return false
-end
+-- local function isWhitelisted(playerName)
+--     for _, name in ipairs(whitelists) do
+--         if name == playerName then
+--             return true
+--         end
+--     end
+--     return false
+-- end
 
-local function kickNonWhitelistedPlayers()
-    local playerName = Players.LocalPlayer.Name
-    if not isWhitelisted(playerName) then
-        Players.LocalPlayer:Kick("ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
-    end
-end
+-- local function kickNonWhitelistedPlayers()
+--     local playerName = Players.LocalPlayer.Name
+--     if not isWhitelisted(playerName) then
+--         Players.LocalPlayer:Kick("ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
+--     end
+-- end
 
-kickNonWhitelistedPlayers()
+-- kickNonWhitelistedPlayers()
 
 
-if isWhitelisted(Players.LocalPlayer.Name) then
-    print("화이트리스트 로드 : " .. Players.LocalPlayer.Name)
-    print(" ")
-    print(" __                 __               ___                      __      ")
-    print("/\\ \\         __    /\\ \\__           /\\_ \\      __            /\\ \\__   ")
-    print("\\ \\ \\___    /\\_\\   \\ \\ ,_\\     __   \\//\\ \\    /\\_\\     ____  \\ \\ ,_\\  ")
-    print(" \\ \\  _ `\\  \\/\\ \\   \\ \\ \\/   /'__\\   \\ \\ \\   \\/\\ \\   /',__\\  \\ \\ \\/  ")
-    print("  \\ \\ \\ \\ \\  \\ \\ \\   \\ \\ \\_ /\\  __/    \\_\\ \\_  \\ \\ \\ /\\__, `\\  \\ \\ \\_ ")
-    print("   \\ \\_\\ \\_\\  \\ \\_\\   \\ \\__\\\\ \\____\\   /\\____\\  \\ \\_\\\\/\\____/   \\ \\__\\")
-    print("    \\/_/\\/_/   \\/_/    \\/__/ \\/____/   \\/____/   \\/_/ \\/___/     \\/__/")    
-    print(" ")
-    print(" ")
-    print(" ___                          __     ")
-    print("/\_ \                        /\ \    ")
-    print("\//\ \      ___      __      \_\ \   ")
-    print("  \ \ \    / __`\  /'__`\    /'_` \  ")
-    print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
-    print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
-    print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
-    print(" ")
+-- if isWhitelisted(Players.LocalPlayer.Name) then
+--     print("화이트리스트 로드 : " .. Players.LocalPlayer.Name)
+--     print(" ")
+--     print(" __                 __               ___                      __      ")
+--     print("/\\ \\         __    /\\ \\__           /\\_ \\      __            /\\ \\__   ")
+--     print("\\ \\ \\___    /\\_\\   \\ \\ ,_\\     __   \\//\\ \\    /\\_\\     ____  \\ \\ ,_\\  ")
+--     print(" \\ \\  _ `\\  \\/\\ \\   \\ \\ \\/   /'__\\   \\ \\ \\   \\/\\ \\   /',__\\  \\ \\ \\/  ")
+--     print("  \\ \\ \\ \\ \\  \\ \\ \\   \\ \\ \\_ /\\  __/    \\_\\ \\_  \\ \\ \\ /\\__, `\\  \\ \\ \\_ ")
+--     print("   \\ \\_\\ \\_\\  \\ \\_\\   \\ \\__\\\\ \\____\\   /\\____\\  \\ \\_\\\\/\\____/   \\ \\__\\")
+--     print("    \\/_/\\/_/   \\/_/    \\/__/ \\/____/   \\/____/   \\/_/ \\/___/     \\/__/")    
+--     print(" ")
+--     print(" ")
+--     print(" ___                          __     ")
+--     print("/\_ \                        /\ \    ")
+--     print("\//\ \      ___      __      \_\ \   ")
+--     print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+--     print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+--     print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+--     print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+--     print(" ")
 
 
     --[[예시]]
