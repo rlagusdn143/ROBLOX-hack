@@ -1,0 +1,185 @@
+-- local Players = game:GetService("Players")
+-- local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
+
+-- local function isWhitelisted(playerName)
+--     for _, name in ipairs(whitelists) do
+--         if name == playerName then
+--             return true
+--         end
+--     end
+--     return false
+-- end
+
+-- local function kickNonWhitelistedPlayers()
+--     local playerName = Players.LocalPlayer.Name
+--     if not isWhitelisted(playerName) then
+--         Players.LocalPlayer:Kick("ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
+--     end
+-- end
+
+-- kickNonWhitelistedPlayers()
+
+
+-- if isWhitelisted(Players.LocalPlayer.Name) then
+--     print("화이트리스트 로드 : " .. Players.LocalPlayer.Name)
+--     print(" ")
+--     print(" __                 __               ___                      __      ")
+--     print("/\\ \\         __    /\\ \\__           /\\_ \\      __            /\\ \\__   ")
+--     print("\\ \\ \\___    /\\_\\   \\ \\ ,_\\     __   \\//\\ \\    /\\_\\     ____  \\ \\ ,_\\  ")
+--     print(" \\ \\  _ `\\  \\/\\ \\   \\ \\ \\/   /'__\\   \\ \\ \\   \\/\\ \\   /',__\\  \\ \\ \\/  ")
+--     print("  \\ \\ \\ \\ \\  \\ \\ \\   \\ \\ \\_ /\\  __/    \\_\\ \\_  \\ \\ \\ /\\__, `\\  \\ \\ \\_ ")
+--     print("   \\ \\_\\ \\_\\  \\ \\_\\   \\ \\__\\\\ \\____\\   /\\____\\  \\ \\_\\\\/\\____/   \\ \\__\\")
+--     print("    \\/_/\\/_/   \\/_/    \\/__/ \\/____/   \\/____/   \\/_/ \\/___/     \\/__/")    
+--     print(" ")
+--     print(" ")
+--     print(" ___                          __     ")
+--     print("/\_ \                        /\ \    ")
+--     print("\//\ \      ___      __      \_\ \   ")
+--     print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+--     print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+--     print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+--     print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+--     print(" ")
+
+
+    --[[예시]]
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/rlagusdn143/tester/main/gui?token=GHSAT0AAAAAACQELHTRLENOXQ25MXONF672ZTOXBXA')))()
+    local Window = OrionLib:MakeWindow({Name = "Test V1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+    local MainTab = Window:MakeTab({
+        Name = "Main",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    MainTab:AddButton({
+        Name = "Hello",
+        Callback = function()
+            print("Hello " .. Players.LocalPlayer.Name)
+        end
+    })
+
+    MainTab:AddButton({
+        Name = "QP Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Community/Premium/main/Loader.lua"))()
+            print("")
+            print(" ___                          __     ")
+            print("/\_ \                        /\ \    ")
+            print("\//\ \      ___      __      \_\ \   ")
+            print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+            print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+            print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+            print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+            print("")
+
+        end
+    })
+
+    MainTab:AddButton({
+        Name = "IY admin",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+            print("")
+            print(" ___                          __     ")
+            print("/\_ \                        /\ \    ")
+            print("\//\ \      ___      __      \_\ \   ")
+            print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+            print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+            print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+            print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+            print("")
+
+        end
+    })
+
+        local PhanTab = Window:MakeTab({
+        Name = "Phantom Forces",
+        Icon = "rbxassetid://292439477",
+        PremiumOnly = false
+    })
+
+    PhanTab:AddButton({
+        Name = "Aim, Esp",
+        Callback = function()
+            loadstring(game:HttpGet("https://scriptblox.com/raw/Keybinds-Update!-Phantom-Forces-PC-Silent-aim-and-ESP-13588"))()
+            print("")
+            print(" ___                          __     ")
+            print("/\_ \                        /\ \    ")
+            print("\//\ \      ___      __      \_\ \   ")
+            print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+            print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+            print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+            print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+            print("")
+        end
+    })
+
+    local ArsTab = Window:MakeTab({
+        Name = "Arsenal",
+        Icon = "rbxassetid://286090429",
+        PremiumOnly = false
+    })
+
+    ArsTab:AddButton({
+        Name = "Tanqr HUB",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/mXQLj82U"))()
+            print("")
+            print(" ___                          __     ")
+            print("/\_ \                        /\ \    ")
+            print("\//\ \      ___      __      \_\ \   ")
+            print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+            print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+            print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+            print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+            print("")
+        end
+    })
+
+    local BigTab = Window:MakeTab({
+        Name = "Big Paint Ball",
+        Icon = "rbxassetid://286090429",
+        PremiumOnly = false
+    })
+
+    BigTab:AddButton({
+        Name = "ZapHUB",
+        Callback = function()
+            loadstring(game:HttpGet('https://zaphub.xyz/Exec'))()
+            print("")
+            print(" ___                          __     ")
+            print("/\_ \                        /\ \    ")
+            print("\//\ \      ___      __      \_\ \   ")
+            print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+            print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+            print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+            print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+            print("")
+        end
+    })
+
+    local DooTab = Window:MakeTab({
+        Name = "Doors",
+        Icon = "rbxassetid://286090429",
+        PremiumOnly = false
+    })
+
+    DooTab:AddButton({
+        Name = "Doors HUB",
+        Callback = function()
+            loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
+            print("")
+            print(" ___                          __     ")
+            print("/\_ \                        /\ \    ")
+            print("\//\ \      ___      __      \_\ \   ")
+            print("  \ \ \    / __`\  /'__`\    /'_` \  ")
+            print("   \_\ \_ /\ \L\ \/\ \L\.\_ /\ \L\ \ ")
+            print("   /\____\\ \____/\ \__/.\_\\ \___,_\\")
+            print("   \/____/ \/___/  \/__/\/_/ \/__,_ / ")
+            print("")
+        end
+    })
+
+    OrionLib:Init()
+end

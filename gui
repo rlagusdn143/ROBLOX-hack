@@ -7,6 +7,8 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
 
+
+
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
@@ -37,7 +39,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("\nHello Library - 실행중 오류가 나타났습니다\n|오류: " .. Response .. "\n")
+	warn("\nHello Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
