@@ -1,5 +1,5 @@
 local Players = game:GetService("Players")
-local whitelists = { "rlagusdn143", "qnfzkdnjs123" }
+local whitelists = { "WAIJSM""rlagusdn143", "qnfzkdnjs123" }
 
 local function isWhitelisted(playerName)
     for _, name in ipairs(whitelists) do
@@ -13,7 +13,7 @@ end
 local function kickNonWhitelistedPlayers()
     local playerName = Players.LocalPlayer.Name
     if not isWhitelisted(playerName) then
-        Players.LocalPlayer:Kick("당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
+        Players.LocalPlayer:Kick("ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
     end
 end
 
