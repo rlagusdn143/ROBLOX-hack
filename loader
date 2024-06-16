@@ -41,4 +41,4 @@ if isWhitelisted(Players.LocalPlayer.Name) then
     print(" ")
 end
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/rlagusdn143/ROBLOX-hack/main/Test%20V1'))()
+loadstring(game:HttpGet('https://github.com/rlagusdn143/ROBLOX-hack/blob/main/Test%20V1'))()
