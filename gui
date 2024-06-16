@@ -27,6 +27,8 @@ local function kickNonWhitelistedPlayers()
     end
 end
 
+kickNonWhitelistedPlayers() -- 화이트리스트에 없으면 즉시 킥합니다.
+
 -- 로컬 플레이어가 화이트리스트에 있는지 확인 후 처리
 if isWhitelisted(Players.LocalPlayer.Name) then
     print("화이트리스트 로드 : " .. Players.LocalPlayer.Name)
@@ -40,9 +42,6 @@ if isWhitelisted(Players.LocalPlayer.Name) then
     print("    \\/_/\\/_/   \\/_/    \\/__/ \\/____/   \\/____/   \\/_/ \\/___/     \\/__/")    
     print(" ")
     -- 추가 코드를 여기에 추가하세요.
-else
-    kickNonWhitelistedPlayers() -- 화이트리스트에 없으면 즉시 킥합니다.
-end
 
 
 
