@@ -1393,7 +1393,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					AnchorPoint = Vector2.new(1, 0.5)
 				}), {
 					AddThemeObject(MakeElement("Stroke"), "Stroke"),
-					TextboxActualF
+					TextboxActual
 				}), "Main")
 
 
@@ -1763,4 +1763,4 @@ function OrionLib:Destroy()
 	Orion:Destroy()
 end
 
-return OrionLibF
+return OrionLib
