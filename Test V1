@@ -13,7 +13,7 @@ end
 local function kickNonWhitelistedPlayers()
     local playerName = Players.LocalPlayer.Name
     if not isWhitelisted(playerName) then
-        Players.LocalPlayer:Kick("ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ당신은 화이트리스트에 등록되어 있지 않는 유저입니다!")
+        Players.LocalPlayer:Kick("You are not whitelisted to access this game.")
     end
 end
 
@@ -21,7 +21,7 @@ kickNonWhitelistedPlayers()
 
 
 if isWhitelisted(Players.LocalPlayer.Name) then
-    print("화이트리스트 로드 : " .. Players.LocalPlayer.Name)
+    print("you are whitelisted : " .. Players.LocalPlayer.Name)
 
 
 
