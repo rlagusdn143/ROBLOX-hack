@@ -1,32 +1,32 @@
 local Players = game:GetService("Players")
-local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
-
-local function isWhitelisted(playerName)
-    for _, name in ipairs(whitelists) do
-        if name == playerName then
-            return true
-        end
-    end
-    return false
-end
-
-local function kickNonWhitelistedPlayers()
-    local playerName = Players.LocalPlayer.Name
-    if not isWhitelisted(playerName) then
-        Players.LocalPlayer:Kick("You are not whitelisted to access this game.")
-    end
-end
-
-kickNonWhitelistedPlayers()
-
-
-if isWhitelisted(Players.LocalPlayer.Name) then
-    print("you are whitelisted : " .. Players.LocalPlayer.Name)
+--local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
+--
+--local function isWhitelisted(playerName)
+--    for _, name in ipairs(whitelists) do
+--        if name == playerName then
+--            return true
+--        end
+--    end
+--    return false
+--end
+--
+--local function kickNonWhitelistedPlayers()
+--    local playerName = Players.LocalPlayer.Name
+--    if not isWhitelisted(playerName) then
+--        Players.LocalPlayer:Kick("You are not whitelisted to access this game.")
+--    end
+--end
+--
+--kickNonWhitelistedPlayers()
+--
+--
+--if isWhitelisted(Players.LocalPlayer.Name) then
+--    print("you are whitelisted : " .. Players.LocalPlayer.Name)
 
 
 
     --[[예시]]
-    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/rlagusdn143/tester/main/gui?token=GHSAT0AAAAAACQELHTRLENOXQ25MXONF672ZTOXBXA')))()
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/rlagusdn143/ROBLOX-hack/main/gui')))()
     local Window = OrionLib:MakeWindow({Name = "Test V1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
     local MainTab = Window:MakeTab({
