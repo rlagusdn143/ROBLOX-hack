@@ -1,27 +1,27 @@
 local Players = game:GetService("Players")
---local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
---
---local function isWhitelisted(playerName)
---    for _, name in ipairs(whitelists) do
---        if name == playerName then
---            return true
---        end
---    end
---    return false
---end
---
---local function kickNonWhitelistedPlayers()
---    local playerName = Players.LocalPlayer.Name
---    if not isWhitelisted(playerName) then
---        Players.LocalPlayer:Kick("You are not whitelisted to access this game.")
---    end
---end
---
---kickNonWhitelistedPlayers()
---
---
---if isWhitelisted(Players.LocalPlayer.Name) then
---    print("you are whitelisted : " .. Players.LocalPlayer.Name)
+local whitelists = { "WAIJSM", "rlagusdn143", "qnfzkdnjs123" }
+
+local function isWhitelisted(playerName)
+    for _, name in ipairs(whitelists) do
+        if name == playerName then
+            return true
+        end
+    end
+    return false
+end
+
+local function kickNonWhitelistedPlayers()
+    local playerName = Players.LocalPlayer.Name
+    if not isWhitelisted(playerName) then
+        Players.LocalPlayer:Kick("You are not whitelisted to access this game.")
+    end
+end
+
+kickNonWhitelistedPlayers()
+
+
+if isWhitelisted(Players.LocalPlayer.Name) then
+    print(.. Players.LocalPlayer.Name)
 
 
 
